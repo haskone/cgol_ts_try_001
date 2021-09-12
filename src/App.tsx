@@ -1,18 +1,25 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import Grid from './components/Grid'
 
 
-const App = () => {
+const App = (
+  props: {
+    className?: string,
+  }
+) => {
+  const { className } = props
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'center',
-    }}>
+    <div className={ className }>
       <Grid/>
     </div>
   )
 }
 
-export default App
+
+export default styled(App)`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`

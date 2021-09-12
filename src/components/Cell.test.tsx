@@ -10,7 +10,7 @@ test('Cell has white background by default', () => {
 
 
 test('Cell has black background when is alived', () => {
-  const { container } = render(<Cell isLiving/>)
+  const { container } = render(<Cell isLiving={ true }/>)
   const cellDiv = container.querySelector('div')
   expect(cellDiv?.style.backgroundColor).toEqual('black')
 })

@@ -1,21 +1,22 @@
 import React from 'react'
-import {CELL_SIZE} from '../common/constants'
+import styled from 'styled-components'
+
+import { CELL_SIZE } from '../common/constants'
 
 
 const Cell = (
   props: {
     isLiving?: boolean,
+    className?: string,
   }
 ) => {
-  const {isLiving} = props
-  return <div
-    style={{
-      backgroundColor: isLiving ? 'black' : 'white',
-      height: CELL_SIZE,
-      width: CELL_SIZE,
-    }}
-  ></div>
+  const { className } = props
+  return <div className={ className }/>
 }
 
 
-export default Cell
+export default styled(Cell)`
+  background-color: ${props => props.isLiving ? 'black' : 'white'};
+  height: ${CELL_SIZE}px;
+  width: ${CELL_SIZE}px;
+`

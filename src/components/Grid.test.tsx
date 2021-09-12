@@ -1,16 +1,6 @@
-/**
- * Definitely not a proper test for such
- * component. In order to make it
- * nice:
- * - mock timers
- * - mock(spyOn) random
- * - compare number of cells each type after a tick or two
- *
- * ... but not this time
- */
 import { render } from '@testing-library/react'
 
-import {COLUMNS, ROWS} from '../common/constants'
+import { COLUMNS, ROWS } from '../common/constants'
 import Grid from './Grid'
 
 
