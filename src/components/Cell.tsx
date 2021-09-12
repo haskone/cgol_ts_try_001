@@ -11,7 +11,7 @@ const Cell = (
   }
 ) => {
   const { className } = props
-  return <div className={ className }/>
+  return <div className={ className } />
 }
 
 
